@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styled from "styled-components";
-import {LazyLoadImage} from "react-lazy-load-image-component";
-import {Blurhash} from "react-blurhash";
+
 import CustomImage from "./CustomImage";
 
 type Images = {
