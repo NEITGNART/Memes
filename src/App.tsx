@@ -23,10 +23,10 @@ export default function App() {
     return (
         <>
             <Wrapper>
-                <WrapperButton onClick={() =>
-                    refetch()
-                }>
-                    <Button>Get Memes</Button>
+                <WrapperButton>
+                    <Button onClick={() =>
+                        refetch()
+                    }>Get Memes</Button>
                 </WrapperButton>
                 <ImageGallery urls={urls}/>
             </Wrapper>
