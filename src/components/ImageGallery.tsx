@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import Grid2 from '@mui/material/Unstable_Grid2';
 
 import CustomImage from "./CustomImage";
 
@@ -8,31 +8,17 @@ type Images = {
 }
 
 const ImageGallery = (props: Images) => {
-
     return (
-        <Wrapper>
+        <Grid2 container display="flex" justifyContent="center" alignItems="center" spacing={2}>
             {props.urls.map((url: string) => {
                 return (
-                    <CustomImage key={url} url={url}/>
+                    <Grid2 key={url}>
+                        <CustomImage url={url}/>
+                    </Grid2>
                 );
             })}
-        </Wrapper>
+        </Grid2>
     );
 };
-
-
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  row-gap: 2em;
-  column-gap: 10px;
-  content-visibility: visible;
-
-  margin: 0 auto;
-  justify-content: center;
-  align-content: center;
-
-`
 
 export default ImageGallery;

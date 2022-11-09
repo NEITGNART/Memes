@@ -24,7 +24,7 @@ const CustomImage = (props: Image) => {
     return (
         <Wrapper>
             <LazyLoadCustom effect="blur" key={url} src={url}
-                            placeholderSrc={url} onLoad={handleLoad} beforeLoad={handleLoadStarted}/>
+                             onLoad={handleLoad} beforeLoad={handleLoadStarted}/>
             {!isLoaded && isLoadStarted && (<StyledBlurhash
                 hash="LEHV6nWB2yk8pyo0adR*.7kCMdnj"
                 width={250}
@@ -41,8 +41,8 @@ const Wrapper = styled.div`
 const LazyLoadCustom = styled(LazyLoadImage)`
   width: 250px;
   height: 250px;
+  border-radius: 10px;
   transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  border-radius: 25%;
 
   :hover {
     border-radius: 12.5%;

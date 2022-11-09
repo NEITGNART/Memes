@@ -25,9 +25,9 @@ export default function App() {
         <>
             <Wrapper>
                 <WrapperButton>
-                    <Button onClick={() =>
+                    <ButtonMemes onClick={() =>
                         refetch()
-                    }>Get Memes</Button>
+                    }>Get Memes</ButtonMemes>
                 </WrapperButton>
                 <ImageGallery urls={urls}/>
             </Wrapper>
@@ -35,7 +35,7 @@ export default function App() {
     );
 }
 
-const Button = styled.button`
+const ButtonMemes = styled.button`
   background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%);
   padding: 12px 0;
   width: 200px;
